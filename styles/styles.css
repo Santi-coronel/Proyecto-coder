@@ -1,0 +1,365 @@
+/* =====================
+   IMPORTACIÓN DE FUENTES
+========================= */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Nunito+Sans:wght@300;600&display=swap");
+
+/* =====================
+   RESET Y BASE
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Nunito Sans', sans-serif;
+  background-image: url(../assets/img/Foto\ cafe.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #222;
+}
+
+/* =====================
+   HEADER Y NAVEGACIÓN
+========================= */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+  
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+  
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: brown;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+}
+  
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+  
+.nav-list li a {
+    color: #333;
+    font-weight: 600;
+    font-size: 1.4rem;
+    text-decoration: none;
+    position: relative;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+  
+.nav-list li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background-color: brown;
+    transition: width 0.3s ease;
+}
+  
+.nav-list li a:hover {
+    color: brown;
+}
+  
+.nav-list li a:hover::after {
+    width: 100%;
+}
+
+/* =====================
+   MAIN Y SECCIONES
+========================= */
+main {
+  padding: 40px 20px;
+  display: block;
+}
+
+.seccion-fondo {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenido-transparente {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 40px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+/* =====================
+   PÁGINA: PRODUCTOS
+========================= */
+
+.producto {
+  margin-bottom: 60px;
+}
+
+.producto-detalle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.producto h3 {
+  color: brown;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.producto p {
+  text-align: justify;
+  padding: 0 20px;
+  font-size: 1.4rem;
+}
+
+.producto img {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 10px;
+}
+
+/* =====================
+   FORMULARIO CONTACTO
+========================= */
+
+.form-servicio-container {
+  background-color: #fefae0;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 10px;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  background-color: #fdf6d6;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  border-radius: 8px;
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+input[type="email"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  flex: 1;
+  min-width: 200px;
+}
+
+button {
+  background-color: #74c69d;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #52b788;
+}
+
+.contacto-extra {
+  background-color: #fdf6d6;
+  margin-top: 20px;
+  text-align: center;
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+/* =====================
+   ZONAS
+========================= */
+.maps {
+  text-align: center;
+  background-color: lightblue;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+/* =====================
+   PREGUNTAS FRECUENTES
+========================= */
+.faq-section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.faq-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.faq-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.faq-container details {
+  margin-bottom: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.faq-container summary {
+  font-weight: bold;
+  list-style: none;
+}
+
+.faq-container summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-container details[open] p {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* =====================
+   PRODUCTOS
+========================= */
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.producto-card {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.producto-card:hover {
+  transform: translateY(-5px);
+}
+
+.producto-card img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.producto-card h3 {
+  font-size: 2rem;
+  color: brown;
+  margin: 1rem 0 0.5rem;
+}
+
+.producto-card p {
+  padding: 0 1.5rem 1.5rem;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+/* =====================
+   FOOTER
+========================= */
+footer {
+  margin-top: auto;
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 1.3rem;
+}
+
+/* =====================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  nav ul.nav-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .producto-detalle {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+
+  .contenido-transparente,
+  .faq-container,
+  .form-servicio-container {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  .maps {
+    height: 300px;
+    font-size: 1rem;
+  }
+}
