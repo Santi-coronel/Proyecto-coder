@@ -1,0 +1,75 @@
+// Animaciones para el sitio
+
+// Animación de fadeIn para usar en varios elementos
+@keyframes fadeIn {
+    from { 
+      opacity: 0; 
+      transform: translateY(-10px); 
+    }
+    to { 
+      opacity: 1; 
+      transform: translateY(0); 
+    }
+  }
+  
+  // Animación para el logo
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  // Animación para iconos en hover
+  @keyframes wiggle {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(5deg);
+    }
+    75% {
+      transform: rotate(-5deg);
+    }
+  }
+  
+  // Animación para tarjetas de productos
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  // Clases de animación para usar en elementos
+  .fade-in {
+    animation: fadeIn 0.5s ease-in-out forwards;
+  }
+  
+  .pulse {
+    animation: pulse 2s infinite;
+  }
+  
+  .wiggle-on-hover {
+    &:hover {
+      animation: wiggle 0.5s ease-in-out;
+    }
+  }
+  
+  // Animaciones para cada tarjeta de producto con delay incremental
+  @for $i from 1 through 4 {
+    .slide-in-#{$i} {
+      opacity: 0;
+      animation: slideIn 0.5s ease-in-out forwards;
+      animation-delay: 0.1s * $i;
+    }
+  }

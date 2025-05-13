@@ -1,0 +1,29 @@
+// Variables para el proyecto
+$primary-color: #7E3E1C;  // Marrón café
+$secondary-color: #74c69d; // Verde para elementos destacados
+$text-color: #333;
+$light-bg: #fefae0;
+$accent-color: #9c6644;
+$navbar-bg: rgba(255, 255, 255, 0.2);
+$transparent-dark: rgba(0, 0, 0, 0.6);
+$transparent-light: rgba(255, 255, 255, 0.85);
+
+// Fuentes
+$title-font: 'Roboto', sans-serif;
+$body-font: 'Nunito Sans', sans-serif;
+
+// Tamaños
+$container-max-width: 1200px;
+$border-radius: 10px;
+$spacing-sm: 10px;
+$spacing-md: 20px;
+$spacing-lg: 40px;
+
+// Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Sombras
+$box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);

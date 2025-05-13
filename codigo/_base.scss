@@ -1,0 +1,118 @@
+// Estilos base
+
+// Importación de fuentes
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Nunito+Sans:wght@300;600&display=swap");
+
+// Reset y estilos básicos
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: $body-font;
+  background-image: url(../assets/img/Foto\ cafe.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: $text-color;
+}
+
+// Estilos generales para contenedores
+.container {
+  max-width: $container-max-width;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+}
+
+// Estilos para encabezados
+h1, h2, h3, h4, h5, h6 {
+  font-family: $title-font;
+  margin-bottom: $spacing-md;
+  color: $primary-color;
+}
+
+// Estilos para enlaces
+a {
+  text-decoration: none;
+  color: $primary-color;
+  @include smooth-transition(color);
+  
+  &:hover {
+    color: darken($primary-color, 10%);
+  }
+}
+
+// Estilos para párrafos
+p {
+  margin-bottom: $spacing-md;
+  line-height: 1.6;
+  font-size: 1.6rem;
+}
+
+// Tarjetas con fondo semitransparente
+.card {
+  background-color: $transparent-light;
+  border-radius: $border-radius;
+  overflow: hidden;
+  box-shadow: $box-shadow;
+  @include smooth-transition(transform);
+  
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+// Utilidades
+.text-center {
+  text-align: center;
+}
+
+.mb-1 { margin-bottom: $spacing-sm; }
+.mb-2 { margin-bottom: $spacing-md; }
+.mb-3 { margin-bottom: $spacing-lg; }
+
+.mt-1 { margin-top: $spacing-sm; }
+.mt-2 { margin-top: $spacing-md; }
+.mt-3 { margin-top: $spacing-lg; }
+
+// Color de texto personalizado para Bootstrap
+.text-brown {
+  color: $primary-color !important;
+}
+
+// Fondos semitransparentes
+.bg-transparent-dark {
+  background-color: $transparent-dark;
+  color: white;
+  padding: $spacing-md;
+  border-radius: $border-radius;
+}
+
+.bg-transparent-light {
+  background-color: $transparent-light;
+  padding: $spacing-md;
+  border-radius: $border-radius;
+}
+
+// Sección de fondo con contenido centrado
+.seccion-fondo {
+  width: 100%;
+  min-height: 100vh;
+  @include flex-center;
+}
+
+.contenido-transparente {
+  @include transparent-container;
+}

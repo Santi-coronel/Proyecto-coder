@@ -3,14 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SANIG</title>
+    <title>SANIG Vending - Máquinas de Café Profesionales</title>
+    <meta name="description" content="SANIG Vending ofrece servicios de máquinas expendedoras de café y bebidas calientes para empresas y oficinas en toda la zona metropolitana." />
     <link rel="shortcut icon" href="./assets/img/coffee-logo-icon.jpg" type="image/x-icon" />
-    <link rel="stylesheet" href="./styles/styles.css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Estilos compilados desde Sass -->
+    <link rel="stylesheet" href="styles/style.css">
   </head>
   <body>
     <header class="navbar">
         <div class="navbar-container">
           <a href="index.html" class="logo">SANIG VENDING</a>
+          <button class="navbar-toggler d-md-none" type="button" id="navbarToggler">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
           <nav>
             <ul class="nav-list">
               <li><a href="./pages/contacto.html">Contacto</a></li>
@@ -22,12 +33,113 @@
         </div>
     </header>
     <main>
+      <!-- Hero Section -->
       <div class="seccion-fondo">
-        <div class="contenido-transparente">
+        <div class="contenido-transparente fade-in">
           <h1>SANIG VENDING</h1>
           <p>
-            Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..." "No hay nadie que ame el dolor mismo, que lo busque, lo encuentre y lo quiera, simplemente porque es el dolor." Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Vivamus in elementum dolor, et molestie tortor. Aliquam arcu metus, vehicula sed neque et, pellentesque dapibus nibh. Praesent semper, massa vel elementum rutrum, purus tortor malesuada leo, a sollicitudin nisi enim
-            et velit. Nullam et convallis turpis, in pharetra enim. Morbi ac porta leo. Pellentesque tristique lacinia justo.
+            Especialistas en brindar la mejor experiencia de café para tu empresa u oficina. Desde 2015, llevamos soluciones de vending profesionales adaptadas a las necesidades de cada cliente, con máquinas de alta calidad y un servicio técnico impecable.
           </p>
+          <p>
+            Nuestro servicio integral incluye la instalación de la máquina, mantenimiento regular, reposición de insumos y soporte técnico, para que tú solo te preocupes por disfrutar del mejor café.
+          </p>
+          <div class="mt-4">
+            <a href="./pages/contacto.html" class="btn btn-primary">Solicitar información</a>
+            <a href="./pages/productos.html" class="btn btn-outline-light ms-2">Ver máquinas</a>
+          </div>
         </div>
+      </div>
+      
+      <!-- Características -->
+      <section class="py-5 bg-light">
+        <div class="container">
+          <div class="row text-center">
+            <div class="col-12">
+              <h2 class="mb-5">¿Por qué elegir SANIG Vending?</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 slide-in-1">
+                <div class="card-body text-center">
+                  <i class="fas fa-coffee fa-3x mb-3 text-brown"></i>
+                  <h3>Café de Calidad</h3>
+                  <p>Trabajamos con los mejores proveedores para ofrecerte granos de café premium, garantizando un sabor excepcional en cada taza.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 slide-in-2">
+                <div class="card-body text-center">
+                  <i class="fas fa-tools fa-3x mb-3 text-brown"></i>
+                  <h3>Servicio Técnico</h3>
+                  <p>Contamos con técnicos especializados que brindan mantenimiento regular y solución rápida ante cualquier inconveniente.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 slide-in-3">
+                <div class="card-body text-center">
+                  <i class="fas fa-thumbs-up fa-3x mb-3 text-brown"></i>
+                  <h3>Sin Costo Inicial</h3>
+                  <p>No pagas por la máquina ni por su instalación. Solo abonas por los consumos realizados, sin compromisos a largo plazo.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <p>SANIG VENDING - Soluciones de café para empresas</p>
+            <div class="contact-info">
+              <span><i class="fas fa-phone"></i> +54 9 116858 0463</span>
+              <span><i class="fas fa-envelope"></i> saningvending@gmail.com</span>
+            </div>
+            <div class="social-links">
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p class="mt-3">© 2025 SANIG Vending. Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script personalizado -->
+    <script>
+      // Navegación móvil
+      document.addEventListener('DOMContentLoaded', function() {
+        const navbarToggler = document.getElementById('navbarToggler');
+        const navList = document.querySelector('.nav-list');
+        
+        if (navbarToggler) {
+          navbarToggler.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navList.classList.toggle('active');
+          });
+        }
+        
+        // Añadir clases de animación a elementos con scroll
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('fade-in');
+            }
+          });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.slide-in-1, .slide-in-2, .slide-in-3').forEach(el => {
+          observer.observe(el);
+        });
+      });
+    </script>
+  </body>
+</html>

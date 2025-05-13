@@ -1,0 +1,65 @@
+// Mixins para reutilización de código
+
+// Flexbox centrado
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  // Contenedor con fondo transparente
+  @mixin transparent-container {
+    background-color: $transparent-dark;
+    padding: $spacing-lg;
+    border-radius: $border-radius;
+    color: white;
+    text-align: center;
+    max-width: 800px;
+    line-height: 1.6;
+  }
+  
+  // Transición suave para todos los elementos
+  @mixin smooth-transition($property: all, $duration: 0.3s) {
+    transition: $property $duration ease;
+  }
+  
+  // Efecto de elevación para tarjetas
+  @mixin card-hover {
+    @include smooth-transition(transform);
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+  
+  // Subrayado animado para enlaces
+  @mixin animated-underline {
+    position: relative;
+    
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      width: 0%;
+      background-color: $primary-color;
+      @include smooth-transition(width);
+    }
+    
+    &:hover::after {
+      width: 100%;
+    }
+  }
+  
+  // Media queries
+  @mixin respond-to($breakpoint) {
+    @if $breakpoint == sm {
+      @media (max-width: $breakpoint-sm) { @content; }
+    } @else if $breakpoint == md {
+      @media (max-width: $breakpoint-md) { @content; }
+    } @else if $breakpoint == lg {
+      @media (max-width: $breakpoint-lg) { @content; }
+    } @else if $breakpoint == xl {
+      @media (max-width: $breakpoint-xl) { @content; }
+    }
+  }

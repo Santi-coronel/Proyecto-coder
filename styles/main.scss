@@ -1,0 +1,49 @@
+// Archivo principal de Sass
+// Importa parciales en un orden específico
+
+// 1. Variables y mixins
+@import "../scss/variables";
+@import "../scss/mixins";
+
+// 2. Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// 3. Animaciones
+@import "../codigo/animaciones";
+
+// 4. Base
+@import "../codigo/base";
+
+// 5. Componentes
+@import "../codigo/navbar";
+@import "../codigo/footer";
+
+// 7. Sobrescritura de Bootstrap
+.btn-primary {
+  background-color: $primary-color;
+  border-color: $primary-color;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+    border-color: darken($primary-color, 10%);
+  }
+}
+
+.card {
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  border: none;
+
+  .card-title {
+    color: $primary-color;
+  }
+}
+
+.text-brown {
+  color: $primary-color !important;
+}
+
+// Animación de carga
+body {
+  animation: fadeIn 1s ease;
+}

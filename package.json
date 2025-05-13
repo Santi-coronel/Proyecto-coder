@@ -1,0 +1,27 @@
+{
+  "name": "sanig-vending",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "sass": "sass --watch styles/main.scss:styles/style.css"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Santi-coronel/Coderhouse.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Santi-coronel/Coderhouse/issues"
+  },
+  "homepage": "https://github.com/Santi-coronel/Coderhouse#readme",
+  "description": "",
+  "dependencies": {
+    "bootstrap": "^5.3.6"
+  },
+  "devDependencies": {
+    "sass": "^1.88.0"
+  }
+}

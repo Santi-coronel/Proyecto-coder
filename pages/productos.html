@@ -3,17 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SANIG</title>
-    <link rel="shortcut icon" href="./assets/img/coffee-logo-icon.jpg" type="image/x-icon" /> 
+    <title>Productos - SANIG Vending</title>
+    <meta name="description" content="Descubre nuestra línea de máquinas expendedoras de café profesionales para empresas y oficinas." />
+    <link rel="shortcut icon" href="../assets/img/coffee-logo-icon.jpg" type="image/x-icon" /> 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- estilos -->
-    <link rel="stylesheet" href="../styles/styles.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Estilos compilados desde Sass -->
+    <link rel="stylesheet" href="../styles/style.css">
   </head>
   <body>
     <header class="navbar">
         <div class="navbar-container">
           <a href="../index.html" class="logo">SANIG VENDING</a>
+          <button class="navbar-toggler d-md-none" type="button" id="navbarToggler">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
           <nav>
             <ul class="nav-list">
               <li><a href="./contacto.html">Contacto</a></li>
@@ -23,46 +31,160 @@
             </ul>
           </nav>
         </div>
-      </header>
-      <main>
-        <section class="container mb-5">
+    </header>
+    
+    <main>
+      <section class="productos-section">
+        <div class="container">
+          <div class="productos-heading">
+            <h2>Nuestras Máquinas</h2>
+            <p>En SANIG Vending nos especializamos en ofrecer la mejor tecnología italiana en máquinas de café, adaptadas a las necesidades de cada empresa. Conoce nuestros modelos principales:</p>
+          </div>
+          
           <div class="row g-4">
             <div class="col-md-4">
-              <div class="card h-100 shadow-sm">
+              <div class="card h-100 shadow-sm slide-in-1">
                 <img src="../assets/img/Expendedora-Kikko.jpg" class="card-img-top" alt="Máquina Kiko">
                 <div class="card-body text-center">
                   <h3 class="card-title text-brown fs-4">Kiko</h3>
-                  <p class="card-text">Diseño compacto y moderno, ideal para espacios reducidos. Variedad de bebidas calientes con excelente rendimiento.</p>
+                  <p class="card-text">Diseño compacto y moderno, ideal para espacios reducidos. Ofrece variedad de bebidas calientes con excelente rendimiento y sabor profesional.</p>
+                  <ul class="text-start producto-features">
+                    <li>Capacidad: hasta 150 servicios diarios</li>
+                    <li>Ideal para: oficinas pequeñas/medianas</li>
+                    <li>Bebidas: 8 selecciones diferentes</li>
+                  </ul>
+                  <div class="btn-container">
+                    <a href="./contacto.html" class="btn btn-coffee">Solicitar información</a>
+                  </div>
                 </div>
               </div>
             </div>
         
             <div class="col-md-4">
-              <div class="card h-100 shadow-sm">
+              <div class="card h-100 shadow-sm slide-in-2">
                 <img src="../assets/img/Kikko-Max.jpg" class="card-img-top" alt="Máquina Kiko Max">
                 <div class="card-body text-center">
                   <h3 class="card-title text-brown fs-4">Kiko Max</h3>
-                  <p class="card-text">Mayor capacidad y eficiencia. Perfecta para empresas con alta demanda y múltiples usuarios diarios.</p>
+                  <p class="card-text">Mayor capacidad y eficiencia. Perfecta para empresas con alta demanda y múltiples usuarios diarios. Tecnología avanzada para un café de excelente calidad.</p>
+                  <ul class="text-start producto-features">
+                    <li>Capacidad: hasta 300 servicios diarios</li>
+                    <li>Ideal para: empresas medianas/grandes</li>
+                    <li>Bebidas: 12 selecciones diferentes</li>
+                  </ul>
+                  <div class="btn-container">
+                    <a href="./contacto.html" class="btn btn-coffee">Solicitar información</a>
+                  </div>
                 </div>
               </div>
             </div>
         
             <div class="col-md-4">
-              <div class="card h-100 shadow-sm">
+              <div class="card h-100 shadow-sm slide-in-3">
                 <img src="../assets/img/venecia.jpg" class="card-img-top" alt="Máquina Venecia">
                 <div class="card-body text-center">
                   <h3 class="card-title text-brown fs-4">Venecia</h3>
-                  <p class="card-text">Elegancia y variedad en un solo modelo. Ideal para recepciones, oficinas premium y espacios con estilo.</p>
+                  <p class="card-text">Elegancia y variedad en un solo modelo. Ideal para recepciones, oficinas premium y espacios con estilo. La experiencia de café más completa.</p>
+                  <ul class="text-start producto-features">
+                    <li>Capacidad: hasta 250 servicios diarios</li>
+                    <li>Ideal para: áreas ejecutivas y recepciones</li>
+                    <li>Bebidas: 10 selecciones premium</li>
+                  </ul>
+                  <div class="btn-container">
+                    <a href="./contacto.html" class="btn btn-coffee">Solicitar información</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-        
-      </main>
+        </div>
+      </section>
+      
+      <!-- Sección de bebidas -->
+      <section class="bg-light py-5">
+        <div class="container">
+          <h2 class="text-center mb-4">Variedad de Bebidas</h2>
+          <p class="text-center mb-5">Todas nuestras máquinas ofrecen una amplia selección de bebidas calientes de alta calidad:</p>
+          
+          <div class="row g-4">
+            <div class="col-md-3 col-6">
+              <div class="text-center">
+                <i class="fas fa-mug-hot fa-3x text-brown mb-3"></i>
+                <h4>Espresso</h4>
+              </div>
+            </div>
+            <div class="col-md-3 col-6">
+              <div class="text-center">
+                <i class="fas fa-coffee fa-3x text-brown mb-3"></i>
+                <h4>Cappuccino</h4>
+              </div>
+            </div>
+            <div class="col-md-3 col-6">
+              <div class="text-center">
+                <i class="fas fa-mug-saucer fa-3x text-brown mb-3"></i>
+                <h4>Café con Leche</h4>
+              </div>
+            </div>
+            <div class="col-md-3 col-6">
+              <div class="text-center">
+                <i class="fas fa-mug-hot fa-3x text-brown mb-3"></i>
+                <h4>Chocolate</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    </main>
 
     <footer>
-      <p>Seguinos en redes: @SANIG.VENDING  saningvending@gmail.com  +54 9 116858 0463 </p>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <p>SANIG VENDING - Soluciones de café para empresas</p>
+            <div class="contact-info">
+              <span><i class="fas fa-phone"></i> +54 9 116858 0463</span>
+              <span><i class="fas fa-envelope"></i> saningvending@gmail.com</span>
+            </div>
+            <div class="social-links">
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p class="mt-3">© 2025 SANIG Vending. Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </div>
     </footer>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script personalizado -->
+    <script>
+      // Navegación móvil
+      document.addEventListener('DOMContentLoaded', function() {
+        const navbarToggler = document.getElementById('navbarToggler');
+        const navList = document.querySelector('.nav-list');
+        
+        if (navbarToggler) {
+          navbarToggler.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navList.classList.toggle('active');
+          });
+        }
+        
+        // Añadir clases de animación a elementos con scroll
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('fade-in');
+            }
+          });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.slide-in-1, .slide-in-2, .slide-in-3').forEach(el => {
+          observer.observe(el);
+        });
+      });
+    </script>
   </body>
 </html>
