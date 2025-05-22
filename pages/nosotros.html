@@ -14,18 +14,23 @@
   </head>
   <body>
     <header class="navbar">
-        <div class="navbar-container">
-          <a href="../index.html" class="logo">SANIG VENDING</a>
-          <nav>
-            <ul class="nav-list">
-              <li><a href="./contacto.html">Contacto</a></li>
-              <li><a href="./nosotros.html">Nosotros</a></li>
-              <li><a href="./productos.html">Productos</a></li>
-              <li><a href="./zonas.html">Zonas</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+      <div class="navbar-container">
+        <a href="../index.html" class="logo">SANIG VENDING</a>
+        <button class="navbar-toggler d-md-none" type="button" id="navbarToggler">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <nav>
+          <ul class="nav-list">
+            <li><a href="./contacto.html">Contacto</a></li>
+            <li><a href="./nosotros.html">Nosotros</a></li>
+            <li><a href="./productos.html">Productos</a></li>
+            <li><a href="./zonas.html">Zonas</a></li>
+          </ul>
+        </nav>
+      </div>
+  </header>
     <main>
       <div class="seccion-fondo">
         <div class="contenido-transparente">
@@ -43,8 +48,8 @@
       </div>
     </main>
 
-    <section class="faq-section">
-      <div class="faq-container">
+    <section class="seccion-fondo">
+      <div class="contenido-transparente">
         <h2>Preguntas Frecuentes</h2>
 
         <details>
@@ -78,5 +83,36 @@
         </div>
       </div>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script personalizado -->
+    <script>
+      // Navegación móvil
+      document.addEventListener('DOMContentLoaded', function() {
+        const navbarToggler = document.getElementById('navbarToggler');
+        const navList = document.querySelector('.nav-list');
+        
+        if (navbarToggler) {
+          navbarToggler.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navList.classList.toggle('active');
+          });
+        }
+        
+        // Añadir clases de animación a elementos con scroll
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('fade-in');
+            }
+          });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.slide-in-1, .slide-in-2, .slide-in-3').forEach(el => {
+          observer.observe(el);
+        });
+      });
+    </script>
   </body>
 </html>
