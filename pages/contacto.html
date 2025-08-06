@@ -7,11 +7,8 @@
     <title>Contacto - SANIG Vending</title>
     <meta name="description" content="Si queres arrancar la mañana de la mejor manera, SANIG es tu opcion ideal" />
     <link rel="shortcut icon" href="../assets/img/coffee-logo-icon.jpg" type="image/x-icon" />
-    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Estilos compilados desde Sass -->
     <link rel="stylesheet" href="../styles/style.css">
   </head>
   <body>
@@ -42,27 +39,32 @@
         </p>
         <div class="row justify-content-center">
           <div class="col-12 col-md-8 col-lg-6">
-            <form>
+            <form action="https://formspree.io/f/xeozrykl" method="POST">
               <div class="mb-3">
-                <label for="email" class="form-label">Mail:</label>
-                <input type="email" class="form-control" id="email" placeholder="ejemplo@mail.com" required />
+                <label for="nombre" class="form-label">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu Nombre" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="ejemplo@mail.com" required>
+              </div>
+              <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje:</label>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
               </div>
               <div class="d-grid">
                 <button type="submit" class="btn btn-primary">Enviar</button>
               </div>
             </form>
-  
             <div class="mt-4 text-center">
               <p><strong>Teléfono:</strong> +54 911 6482 6016</p>
-              <p><strong>Email:</strong> saningvending@gmail.com</p>
+              <p><strong>Email:</strong> sanigvending@gmail.com</p>
             </div>
           </div>
         </div>
       </div>
     </section>
   </main>
-  
-
     <footer>
       <div class="container">
         <div class="row">
@@ -70,7 +72,7 @@
             <p>SANIG VENDING - Soluciones de café para empresas</p>
             <div class="contact-info">
               <span><i class="fas fa-phone"></i> +54 911 6482 6016</span>
-              <span><i class="fas fa-envelope"></i> saningvending@gmail.com</span>
+              <span><i class="fas fa-envelope"></i> sanigvending@gmail.com</span>
             </div>
             <div class="social-links">
               <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -82,10 +84,7 @@
         </div>
       </div>
     </footer>
-
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Script personalizado -->
     <script>
       // Navegación móvil
       document.addEventListener('DOMContentLoaded', function() {
